@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-lexend {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-outfit {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-jakarta {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Senior-friendly UI scale and smooth touch targets */
+html {
+  transition: font-size 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html[data-text-scale="normal"] {
+  font-size: 16px;
+  --ui-scale: 1;
+}
+
+html[data-text-scale="large"] {
+  font-size: 18.4px;
+  --ui-scale: 1.15;
+}
+
+html[data-text-scale="extra-large"] {
+  font-size: 20.8px;
+  --ui-scale: 1.30;
+}
+
+/* Ensure pixel-specific font classes scale proportionally across all screens and tabs */
+html[data-text-scale="large"] [class*="text-[9px]"],
+html[data-text-scale="large"] .text-\[9px\] {
+  font-size: 0.65rem !important;
+}
+html[data-text-scale="large"] [class*="text-[10px]"],
+html[data-text-scale="large"] .text-\[10px\] {
+  font-size: 0.72rem !important;
+}
+html[data-text-scale="large"] [class*="text-[11px]"],
+html[data-text-scale="large"] .text-\[11px\] {
+  font-size: 0.78rem !important;
+}
+
+html[data-text-scale="extra-large"] [class*="text-[9px]"],
+html[data-text-scale="extra-large"] .text-\[9px\] {
+  font-size: 0.72rem !important;
+}
+html[data-text-scale="extra-large"] [class*="text-[10px]"],
+html[data-text-scale="extra-large"] .text-\[10px\] {
+  font-size: 0.82rem !important;
+}
+html[data-text-scale="extra-large"] [class*="text-[11px]"],
+html[data-text-scale="extra-large"] .text-\[11px\] {
+  font-size: 0.88rem !important;
+}
+
+/* Accessible minimum touch targets when scaled */
+html[data-text-scale="large"] button,
+html[data-text-scale="large"] input {
+  min-height: 2.75rem;
+}
+
+html[data-text-scale="extra-large"] button,
+html[data-text-scale="extra-large"] input {
+  min-height: 3rem;
+}
+

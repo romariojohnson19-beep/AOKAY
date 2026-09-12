@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isGroupMember(groupId) {
+      return request.auth != null && 
+        exists(/databases/$(database)/documents/groups/$(groupId)/members/$(request.auth.uid));
+    }
+    
+    match /groups/{groupId} {
+      allow read, write: if isGroupMember(groupId);
+      match /{allSubcollections=**} {
+        allow read, write: if isGroupMember(groupId);
+      }
+    }
+  }
+}

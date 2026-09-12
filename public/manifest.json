@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "Aokay - Senior Family Safety & Check-In",
+  "short_name": "Aokay",
+  "description": "Minimalist, high-utility senior family safety check-in app with one-tap check-in, voice notes, and emergency swipe gestures.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "categories": ["lifestyle", "utilities", "health"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
