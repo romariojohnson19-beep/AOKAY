@@ -1,7 +1,11 @@
 {
   "name": "Aokay - Group & Family Safety Check-In",
   "description": "Minimalist, high-utility safety check-in for hiking crews, travel trips, friend groups, and senior families with 1-tap check-ins, location requests, display pictures, and voice notes.",
-  "requestFramePermissions": ["microphone", "geolocation"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-
